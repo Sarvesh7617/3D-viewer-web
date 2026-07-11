@@ -228,7 +228,7 @@ const Home = () => {
 
         loader.load(
 
-            `http://localhost:4000/modelupload/${selectedModel.filePath}`,
+            `https://threed-viewer-web-y5i8.onrender.com/modelupload/${selectedModel.filePath}`,
 
             (gltf)=>{
 

@@ -1,12 +1,5 @@
 import mongoose from "mongoose";
 import { DB_NAME } from "../constant.js";
-import dns from 'node:dns/promises';
-dns.setServers(['1.1.1.1', '8.8.8.8']);
-
-import dnsNative from 'dns';
-dnsNative.setDefaultResultOrder('ipv4first');
-
-
 
 
 const DBconnect=async()=>{

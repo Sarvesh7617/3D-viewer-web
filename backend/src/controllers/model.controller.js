@@ -108,11 +108,15 @@ const deleteModel = asyncHandler(async (req, res) => {
 
 
         // Delete file from uploads folder
-        if (model.filePath)
-
-            fs.unlinkSync(
-                path.resolve(model.filePath)
-            );
+        const filePath = path.join(
+            process.cwd(),
+            "src",
+            "modelupload",
+            model.filePath
+        );
+        
+        if (fs.existsSync(filePath))
+            fs.unlinkSync(filePath);
 
 
 
